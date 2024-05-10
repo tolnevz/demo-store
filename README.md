@@ -1,6 +1,7 @@
 # demo-store
 
 Ecwid test task. Demo store
+Preview - [https://taupe-chebakia-264f4f.netlify.app/](https://taupe-chebakia-264f4f.netlify.app/)
 
 ## Recommended IDE Setup
 
