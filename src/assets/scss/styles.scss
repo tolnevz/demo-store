@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body,
+#app {
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 300 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.block-title {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+.page-loader {
+  position: absolute;
+  z-index: 9997;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.btn {
+  text-transform: uppercase;
+  font-size: 0.9em !important;
+}
