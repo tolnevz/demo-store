@@ -24,7 +24,6 @@
           <slot name="footer">
             <div>
               <button title="Продолжить покупки" type="button" class="btn btn-outline-success mt-3" @click="emit('modal-close')">Продолжить покупки</button>
-              <!-- <button @click.stop="emit('modal-close')">Submit</button> -->
             </div>
           </slot>
         </div>
