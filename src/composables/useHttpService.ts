@@ -6,10 +6,11 @@ interface ServiceResponse<T> {
 }
 
 export const useHttpService = () => {
-  const apiPath = 'https://app.ecwid.com/api/v3/58958138';
+  const apiPath = import.meta.env.VITE_API_PATH;
+  const authToken = import.meta.env.VITE_AUTH_TOKEN;
   const headers = new Headers({
     'Content-Type': 'application/json',
-    Authorization: `Bearer public_7BxbJGWyDaZfSQqjVS5Ftr4jzXkS43UD`,
+    Authorization: `Bearer ${authToken}`,
   });
 
   const get = async <T>(url: string, payload: Payload = {}): Promise<ServiceResponse<T | null>> => {
