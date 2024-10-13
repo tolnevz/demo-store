@@ -43,7 +43,7 @@
       <template v-else>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><RouterLink :to="{ name: 'HomePage', query: { ...route.query } }">Main</RouterLink></li>
+            <li class="breadcrumb-item"><RouterLink :to="{ name: 'HomePage', query: { ...route.query } }">Home</RouterLink></li>
             <li class="breadcrumb-item active" aria-current="page">{{ product?.name }}</li>
           </ol>
         </nav>

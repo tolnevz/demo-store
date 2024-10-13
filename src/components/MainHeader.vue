@@ -29,7 +29,7 @@
         <RouterLink class="navbar-brand d-none d-lg-block" :to="{ name: 'HomePage' }">T-STORE</RouterLink>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex w-100 justify-content-end">
           <li class="nav-item">
-            <RouterLink class="nav-link text-center text-md-start" :to="{ name: 'HomePage' }" activeClass="active">Main</RouterLink>
+            <RouterLink class="nav-link text-center text-md-start" :to="{ name: 'HomePage' }" activeClass="active">Home</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link position-relative text-center text-md-start" :to="{ name: 'ShoppingCart' }" activeClass="active">
