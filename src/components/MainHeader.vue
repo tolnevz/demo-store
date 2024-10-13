@@ -13,7 +13,7 @@
 <template>
   <nav class="navbar bg-dark border-bottom border-body sticky-top navbar-expand-lg" data-bs-theme="dark">
     <div class="container">
-      <RouterLink class="navbar-brand d-block d-lg-none" :to="{ name: 'HomePage' }">Магазин</RouterLink>
+      <RouterLink class="navbar-brand d-block d-lg-none" :to="{ name: 'HomePage' }">T-STORE</RouterLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -26,14 +26,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <RouterLink class="navbar-brand d-none d-lg-block" :to="{ name: 'HomePage' }">Магазин</RouterLink>
+        <RouterLink class="navbar-brand d-none d-lg-block" :to="{ name: 'HomePage' }">T-STORE</RouterLink>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex w-100 justify-content-end">
           <li class="nav-item">
-            <RouterLink class="nav-link text-center text-md-start" :to="{ name: 'HomePage' }" activeClass="active">Главная</RouterLink>
+            <RouterLink class="nav-link text-center text-md-start" :to="{ name: 'HomePage' }" activeClass="active">Main</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link position-relative text-center text-md-start" :to="{ name: 'ShoppingCart' }" activeClass="active">
-              Корзина
+              Shopping Cart
               <span v-if="getCartProductsCount" class="position-absolute start-100 translate-middle badge rounded-pill bg-primary cart-badge">
                 {{ getCartProductsCount }}
               </span>

@@ -23,7 +23,7 @@
         <div class="custom-modal-footer">
           <slot name="footer">
             <div>
-              <button title="Продолжить покупки" type="button" class="btn btn-outline-success mt-3" @click="emit('modal-close')">Продолжить покупки</button>
+              <button title="Continue shopping" type="button" class="btn btn-outline-success mt-3" @click="emit('modal-close')">Continue shopping</button>
             </div>
           </slot>
         </div>

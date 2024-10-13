@@ -43,7 +43,7 @@
       <template v-else>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><RouterLink :to="{ name: 'HomePage', query: { ...route.query } }">Главная</RouterLink></li>
+            <li class="breadcrumb-item"><RouterLink :to="{ name: 'HomePage', query: { ...route.query } }">Main</RouterLink></li>
             <li class="breadcrumb-item active" aria-current="page">{{ product?.name }}</li>
           </ol>
         </nav>
@@ -56,7 +56,7 @@
             <h1 class="fs-3 fw-light mt-4 mt-md-0">{{ product?.name }}</h1>
             <p class="fs-5 mt-3">{{ product?.defaultDisplayedPriceFormatted }}</p>
             <p class="my-4" v-html="product?.description"></p>
-            <button title="Добавить в корзину" class="btn btn-primary mt-3" @click="onAddProductToCartClick"> Добавить в корзину </button>
+            <button title="Add to Cart" class="btn btn-primary mt-3" @click="onAddProductToCartClick"> Add to Cart </button>
           </div>
         </div>
       </template>

@@ -66,7 +66,7 @@
     <ErrorMessage :error-data="errorData"></ErrorMessage>
   </template>
   <template v-else>
-    <h1 class="block-title">Категории</h1>
+    <h1 class="block-title">Categories</h1>
     <div class="list-group">
       <div
         class="list-group-item list-group-item-action cursor-pointer"
@@ -76,31 +76,25 @@
         @click="onSelectCategory(category.id)"
       >
         <div class="d-flex w-100 align-items-center">
-          <img :src="category.hdThumbnailUrl" class="category-img me-2" :alt="category.name" />
           <div class="fs-6 mb-1">{{ category.name }}</div>
         </div>
       </div>
     </div>
     <div class="d-flex justify-content-end">
       <button
-        title="Сбросить"
+        title="Reset"
         type="button"
         class="btn btn-outline-primary btn-sm mt-2"
         :class="{ 'disabled btn-outline-secondary': !selectedCategories.length }"
         @click="resetCategories"
       >
-        Сбросить
+        Reset
       </button>
     </div>
   </template>
 </template>
 
 <style scoped lang="scss">
-  .category-img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
-  }
   .list-group-item {
     border: 1px solid lighten(#0d6efd, 40%);
     border-radius: 5px;

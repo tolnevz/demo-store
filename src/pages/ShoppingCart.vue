@@ -31,7 +31,7 @@
   <div class="container mt-4 mb-5">
     <div class="row">
       <div class="col-12">
-        <h1 class="block-title">Корзина</h1>
+        <h1 class="block-title">Shopping Cart</h1>
 
         <template v-if="cartProducts.length">
           <div class="card mb-3" v-for="product in cartProducts" :key="product.id">
@@ -50,7 +50,7 @@
                         <p class="card-title fs-6 fw-light text-uppercase">{{ product.name }}</p>
                         <p class="mb-0">{{ product.defaultDisplayedPriceFormatted }}</p>
                       </div>
-                      <button title="Удалить" type="button" class="btn btn-sm btn-outline-danger ms-4" @click.prevent="deleteProductFromCart(product)">
+                      <button title="Delete" type="button" class="btn btn-sm btn-outline-danger ms-4" @click.prevent="deleteProductFromCart(product)">
                         <i class="bi bi-trash3"></i>
                       </button>
                     </div>
@@ -58,13 +58,13 @@
                 </div>
                 <div class="col-md-6 pe-3 pb-3 pb-md-0">
                   <div class="d-flex flex-column align-items-center align-items-md-end">
-                    <p class="fs-3 mb-1 fw-light">{{ product.totalPrice }} ₽</p>
+                    <p class="fs-3 mb-1 fw-light">{{ product.totalPrice }} €</p>
                     <div class="d-flex align-items-center">
-                      <button title="Меньше на 1" type="button" class="btn btn-sm btn-outline-primary" @click.prevent="decreaseQuantity(product)">
+                      <button title="Decrease by 1" type="button" class="btn btn-sm btn-outline-primary" @click.prevent="decreaseQuantity(product)">
                         <i class="bi bi-dash-lg"></i>
                       </button>
-                      <div class="px-3">{{ product.quantity }} шт.</div>
-                      <button title="Больше на 1" type="button" class="btn btn-sm btn-outline-primary" @click.prevent="increaseQuantity(product)">
+                      <div class="px-3">{{ product.quantity }} pcs.</div>
+                      <button title="Increase by 1" type="button" class="btn btn-sm btn-outline-primary" @click.prevent="increaseQuantity(product)">
                         <i class="bi bi-plus-lg"></i>
                       </button>
                     </div>
@@ -74,23 +74,26 @@
             </RouterLink>
           </div>
           <div class="d-flex flex-column justify-content-center align-items-center">
-            <p class="fs-4 fw-light mb-0 mt-3">Итого: {{ getCartProductsTotalPrice }} ₽</p>
+            <p class="fs-4 fw-light mb-0 mt-3">Total: {{ getCartProductsTotalPrice }} €</p>
             <div>
-              <button title="Оформить заказ" class="btn btn-primary mt-3" @click="onPlaceOrderClicked = true">Оформить заказ</button>
+              <button title="Place Order" class="btn btn-primary mt-3" @click="onPlaceOrderClicked = true">Place Order</button>
             </div>
             <ModalComponent :isOpen="onPlaceOrderClicked" @modal-close="onPlaceOrder">
               <template #header>
-                <h4 class="alert-heading fw-light fs-3">Поздравляем! 🎉</h4>
+                <h4 class="alert-heading fw-light fs-3">Congratulations! 🎉</h4>
               </template>
               <template #content>
-                <p class="text-center">Ваш заказ оформлен!</p>
+                <p class="text-center"
+                  >Your order has been placed. <br />
+                  Thank you for shopping with us!</p
+                >
               </template>
             </ModalComponent>
           </div>
         </template>
         <template v-else>
           <div class="alert alert-primary" role="alert">
-            Ваша корзина пуста. <RouterLink class="alert-link fw-medium" :to="{ name: 'HomePage' }">Смотреть товары</RouterLink>
+            Your cart is empty. <RouterLink class="alert-link fw-medium" :to="{ name: 'HomePage' }">View products</RouterLink>
           </div>
         </template>
       </div>

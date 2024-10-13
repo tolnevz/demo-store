@@ -28,7 +28,7 @@ const store = defineStore('category', {
           price += item.totalPrice;
         });
       }
-      return price;
+      return Number(price.toFixed(2));
     },
   },
   actions: {
@@ -38,12 +38,12 @@ const store = defineStore('category', {
         cartProduct.quantity += 1;
         cartProduct.totalPrice = this.calculateTotalPrice(product, cartProduct.quantity);
       } else {
-        this.cartProducts.push({ ...product, quantity: 1, totalPrice: product.price });
+        this.cartProducts.push({ ...product, quantity: 1, totalPrice: Number(product.price.toFixed(2)) });
       }
       localStorage.setItem('shopCart', JSON.stringify(this.cartProducts));
     },
     calculateTotalPrice(product: Product, quantity: number): number {
-      return product.price * quantity;
+      return Number((product.price * quantity).toFixed(2));
     },
     getCartFromLocalStorage() {
       const cart = localStorage.getItem('shopCart');

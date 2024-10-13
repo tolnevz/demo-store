@@ -1,16 +1,8 @@
-import type { ImageDetails, Translations } from './common';
-import type { BorderInfo } from './product';
+import type { Translations } from './common';
 
 export interface Category {
   id: number;
   orderBy: number;
-  hdThumbnailUrl: string;
-  thumbnailUrl: string;
-  originalImageUrl: string;
-  imageUrl: string;
-  originalImage: ImageDetails;
-  thumbnail: ImageDetails;
-  borderInfo: BorderInfo;
   name: string;
   nameTranslated: Translations;
   url: string;

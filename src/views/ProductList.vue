@@ -40,7 +40,7 @@
     <ErrorMessage :error-data="errorData"></ErrorMessage>
   </template>
   <template v-else>
-    <h1 class="block-title">Товары</h1>
+    <h1 class="block-title">Products</h1>
 
     <div>
       <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -55,7 +55,7 @@
               <p class="card-text fs-6 fw-light">{{ product.defaultDisplayedPriceFormatted }}</p>
             </div>
             <div class="card-footer d-flex justify-content-center">
-              <button title="Купить" class="btn btn-primary" @click.prevent="onBuyClick(product)">Купить</button>
+              <button title="Buy" class="btn btn-primary" @click.prevent="onBuyClick(product)">Buy</button>
             </div>
           </RouterLink>
         </div>

@@ -1,6 +1,6 @@
 # demo-store
 
-Demo store
+Demo store with Ecwid API
 Preview - [https://taupe-chebakia-264f4f.netlify.app/](https://taupe-chebakia-264f4f.netlify.app/)
 
 ## Recommended IDE Setup
@@ -16,6 +16,8 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
+
+Copy or rename `.env.example` and provide API path and AUTH token
 
 ```sh
 npm install
